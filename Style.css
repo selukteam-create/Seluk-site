@@ -569,10 +569,9 @@ h1 {
 
 /* grid */
 .social-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 /* карточка */
@@ -1063,159 +1062,8 @@ h1 {
 .social-card h2 {
     font-size: 18px;
 }
-h1 {
-    margin-bottom: 30px;
-    text-align: center;
-}
 
 .social-card span {
     font-size: 14px;
     opacity: 0.7;
-}
-@media (max-width: 768px) {
-    .social-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-@media (max-width: 768px) {
-
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    .players,
-    .social-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .player,
-    .social-card {
-        width: 100%;
-        max-width: 320px;
-    }
-
-}
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 28px;
-        line-height: 1.2;
-    }
-
-    .subtitle {
-        font-size: 18px;
-    }
-
-    .start {
-        font-size: 16px;
-    }
-
-}
-.lang {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-@media (max-width: 768px) {
-    .lang {
-        flex-direction: row;
-        margin-top: 10px;
-    }
-
-    .lang-btn {
-        padding: 10px 16px;
-        font-size: 14px;
-    }
-* {
-    box-sizing: border-box;
-}
-@media (max-width: 768px) {
-
-    body {
-        overflow-x: hidden;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    .header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .top-right {
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 40px;
-}
-
-.logo {
-    width: 60px;
-}
-
-.top-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.lang {
-    display: flex;
-    gap: 10px;
-}
-@media (max-width: 768px) {
-
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px;
-    }
-
-    .logo {
-        width: 45px;
-    }
-
-    .top-right {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 5px;
-    }
-
-    .lang {
-        gap: 5px;
-    }
-
-    .lang-btn {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    .matches-counter {
-        font-size: 12px;
-    }
-
 }
