@@ -569,9 +569,10 @@ h1 {
 
 /* grid */
 .social-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 /* карточка */
@@ -1062,8 +1063,42 @@ h1 {
 .social-card h2 {
     font-size: 18px;
 }
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
 
 .social-card span {
     font-size: 14px;
     opacity: 0.7;
+}
+@media (max-width: 768px) {
+    .social-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .players,
+    .social-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player,
+    .social-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
 }
