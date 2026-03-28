@@ -1067,3 +1067,86 @@ h1 {
     font-size: 14px;
     opacity: 0.7;
 }
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .top-right {
+        gap: 5px;
+    }
+
+    .lang {
+        gap: 5px;
+    }
+
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .matches-counter {
+        font-size: 12px;
+    }
+
+    /* HERO TEXT */
+    h1 {
+        font-size: 34px !important;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .start {
+        font-size: 13px;
+    }
+
+    /* NAV */
+    .bottom-nav {
+        position: static;
+        transform: none;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        margin-top: 30px;
+    }
+
+    .bottom-nav a {
+        width: 90%;
+        text-align: center;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    /* SOCIAL GRID */
+    .social-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .social-card {
+        width: 100% !important;
+        height: auto;
+        flex-direction: row;
+    }
+
+    /* PLAYERS */
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
