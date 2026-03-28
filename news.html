@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seluk Team - News</title>
+    <link rel="stylesheet" href="./news.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 data-key="news_title">Новости</h1>
+    </header>
+
+    <main>
+        <div id="news-container"></div>
+    </main>
+
+    <script src="./Script.js"></script>
+    <script src="./news.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                if (typeof applyTranslations === "function") {
+                    applyTranslations();
+                }
+            }, 50);
+        });
+    </script>
+
+</body>
+
+</html>

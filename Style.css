@@ -1,0 +1,1069 @@
+:root {
+    --purple: #7b2cff;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: radial-gradient(circle at center, #140028, #000 70%);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ГЛОУ */
+body::before {
+    content: "";
+    position: fixed;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(123, 44, 255, 0.25), transparent);
+    top: -200px;
+    left: -200px;
+    filter: blur(150px);
+    z-index: -1;
+}
+
+/* ДОП ГЛОУ */
+body::after {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(162, 89, 255, 0.2), transparent);
+    bottom: -200px;
+    right: -200px;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* RIGHT TOP BLOCK */
+.top-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* LOGO */
+.logo {
+    width: 80px;
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(123, 44, 255, 0.6);
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* LANG */
+.lang {
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-btn.active {
+    background: var(--purple);
+    box-shadow: 0 0 10px var(--purple);
+}
+
+.lang-btn:hover {
+    background: rgba(123, 44, 255, 0.3);
+}
+
+/* MATCH COUNTER */
+.matches-counter {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CENTER TEXT */
+.center {
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+/* TITLE */
+h1 {
+    font-size: 170px;
+    background: linear-gradient(90deg, #fff, #a259ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* SUBTITLE */
+.subtitle {
+    font-size: 26px;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* START */
+.start {
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+/* NAV */
+.bottom-nav {
+    position: absolute;
+    bottom: 60px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 30px;
+}
+
+/* КНОПКИ */
+.bottom-nav a {
+    padding: 20px 36px;
+    font-size: 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER */
+.bottom-nav a:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 0 35px rgba(123, 44, 255, 0.9);
+}
+
+/* ЛИНИЯ */
+.bottom-nav a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--purple);
+    transition: 0.3s;
+}
+
+.bottom-nav a:hover::before {
+    width: 100%;
+}
+
+/* ROSTER (главная кнопка) */
+.bottom-nav .rosters {
+    background: linear-gradient(90deg, #7b2cff, #a259ff);
+    box-shadow: 0 0 20px rgba(123, 44, 255, 0.7);
+    animation: pulse 2s infinite;
+}
+
+/* ПУЛЬС */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(123, 44, 255, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(123, 44, 255, 1);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(123, 44, 255, 0.5);
+    }
+}
+
+/* ANIMATION TEXT */
+.fade-up {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    animation: fadeUp 1.2s cubic-bezier(.2, .8, .2, 1) forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 22px;
+    margin-bottom: 14px;
+
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    animation: fadeIn 0.5s ease forwards;
+
+    transition: 0.25s;
+}
+
+.match:hover {
+    transform: scale(1.02);
+    border-color: rgba(0, 255, 150, 0.4);
+    box-shadow: 0 0 25px rgba(0, 255, 150, 0.15);
+}
+
+/* новый эффект вместо треугольника */
+.match::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.12;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.match.win::before {
+    background: linear-gradient(120deg, #00ff88, transparent);
+}
+
+.match.lose::before {
+    background: linear-gradient(120deg, #ff2e2e, transparent);
+}
+
+.match:hover::before {
+    opacity: 0.15;
+}
+
+.match-icon {
+    width: 40px;
+}
+
+.teams {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.our {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.score {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* hint */
+.hint {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+
+    background: #111;
+    color: #00ff88;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.hint.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.hint {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ff88;
+
+    padding: 10px 18px;
+    border-radius: 10px;
+
+    opacity: 0;
+    z-index: 9999;
+
+    transition: 0.3s;
+}
+
+.hint.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.score.win {
+    color: #00ff88 !important;
+}
+
+.score.lose {
+    color: #ff2e2e !important;
+}
+
+.score.draw {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.match.win {
+    background: linear-gradient(90deg,
+            rgba(0, 255, 136, 0.15),
+            rgba(0, 0, 0, 0.85) 40%);
+}
+
+.match.lose {
+    background: linear-gradient(90deg,
+            rgba(255, 46, 46, 0.15),
+            rgba(0, 0, 0, 0.85) 40%);
+}
+
+.match.draw {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(0, 0, 0, 0.85) 40%);
+}
+
+.match.win {
+    box-shadow: inset 3px 0 0 #00ff88;
+}
+
+.match.lose {
+    box-shadow: inset 3px 0 0 #ff2e2e;
+}
+
+.match.draw {
+    box-shadow: inset 3px 0 0 #ffffff;
+}
+
+.result-tag {
+    font-size: 11px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.result-tag.win {
+    background: rgba(0, 255, 136, 0.12);
+    color: #00ff88;
+}
+
+.result-tag.lose {
+    background: rgba(255, 46, 46, 0.12);
+    color: #ff2e2e;
+}
+
+.result-tag.draw {
+    background: rgba(255, 255, 255, 0.1);
+    color: #aaa;
+}
+
+.roster-winrate {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.roster-winrate.win {
+    color: #00ff88;
+}
+
+.roster-winrate.lose {
+    color: #ff3b3b;
+}
+
+.roster-winrate.mid {
+    color: #ffffff;
+}
+
+.socials {
+    max-width: 1100px;
+    margin: 80px auto;
+}
+
+.social-title {
+    font-size: 80px;
+    margin-bottom: 40px;
+}
+
+/* карточка */
+.social-card {
+    position: relative;
+
+    padding: 30px;
+    border-radius: 18px;
+
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+/* glow */
+.social-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* hover */
+.social-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* текст */
+.social-card h2 {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.social-card span {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.icon {
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+/* ===== ЦВЕТА ===== */
+
+.twitter::before {
+    background: linear-gradient(120deg, #1da1f2, transparent);
+}
+
+.reddit::before {
+    background: linear-gradient(120deg, #ff4500, transparent);
+}
+
+.tiktok::before {
+    background: linear-gradient(120deg, #ff0050, #00f2ea);
+}
+
+.telegram::before {
+    background: linear-gradient(120deg, #2AABEE, transparent);
+}
+
+.youtube::before {
+    background: linear-gradient(120deg, #ff0000, transparent);
+}
+
+.social-card:hover::before {
+    opacity: 0.15;
+}
+
+/* неоновая линия */
+.social-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0%;
+    height: 2px;
+    background: white;
+
+    transition: 0.3s;
+}
+
+.social-card:hover::after {
+    width: 100%;
+}
+
+/* ===== SOCIAL PAGE ===== */
+
+.socials {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.social-title {
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 40px;
+
+    background: linear-gradient(90deg, #fff, #a259ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* grid */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* карточка */
+.social-card {
+    position: relative;
+
+    padding: 30px;
+    border-radius: 18px;
+
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+/* glow слой */
+.social-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* hover */
+.social-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* линия снизу */
+.social-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0%;
+    height: 2px;
+    background: white;
+
+    transition: 0.3s;
+}
+
+.social-card:hover::after {
+    width: 100%;
+}
+
+/* текст */
+.icon {
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+.social-card h2 {
+    font-size: 24px;
+    margin-top: 12px;
+}
+
+.social-card span {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+/* ===== PLATFORM COLORS ===== */
+
+.twitter::before {
+    background: linear-gradient(120deg, #1da1f2, transparent);
+}
+
+.reddit::before {
+    background: linear-gradient(120deg, #ff4500, transparent);
+}
+
+.tiktok::before {
+    background: linear-gradient(120deg, #ff0050, #00f2ea);
+}
+
+.telegram::before {
+    background: linear-gradient(120deg, #2AABEE, transparent);
+}
+
+.youtube::before {
+    background: linear-gradient(120deg, #ff0000, transparent);
+}
+
+.social-card:hover::before {
+    opacity: 0.15;
+}
+
+/* текст glow */
+.social-card:hover h2 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.hero::before,
+.hero::after {
+    pointer-events: none;
+}
+
+.lang {
+    position: relative;
+    z-index: 10;
+}
+
+.bottom-nav {
+    z-index: 10;
+}
+
+/* иконки */
+.social-card .icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* hover эффект */
+.social-card:hover .icon {
+    transform: scale(1.15);
+}
+
+/* чтобы карточки выглядели дороже */
+.social-card {
+    backdrop-filter: blur(10px);
+    background: rgba(20, 20, 35, 0.6);
+    border-radius: 16px;
+    transition: 0.25s;
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(123, 44, 255, 0.4);
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+
+    animation: logoFloat 4s ease-in-out infinite,
+        logoGlow 3s ease-in-out infinite;
+
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* ЛЁГКИЙ hover */
+.logo:hover {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 20px rgba(180, 100, 255, 0.8));
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo:hover {
+    animation: logoFloat 1.2s ease-in-out infinite;
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 20px rgba(180, 100, 255, 0.8));
+}
+
+/* ===== SOCIAL PAGE ===== */
+
+.socials {
+    max-width: 1100px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.social-title {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+
+.social-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+    backdrop-filter: blur(10px);
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.social-card .icon {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.social-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.social-card span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* цвета */
+
+.twitter:hover {
+    box-shadow: 0 0 15px #1da1f2;
+}
+
+.reddit:hover {
+    box-shadow: 0 0 15px #ff4500;
+}
+
+.tiktok:hover {
+    box-shadow: 0 0 15px #000000;
+}
+
+.telegram:hover {
+    box-shadow: 0 0 15px #0088cc;
+}
+
+.youtube:hover {
+    box-shadow: 0 0 15px #ff0000;
+}
+
+
+.birthday {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffcc00;
+    animation: pop 1s ease infinite alternate;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* затемнение + glow */
+.birthday-mode {
+    box-shadow: 0 0 40px rgba(255, 200, 0, 0.6);
+}
+
+.confetti {
+    position: fixed;
+    top: -10px;
+    width: 6px;
+    height: 6px;
+    background: red;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.cake {
+    width: 60px;
+    display: none;
+    /* ❗ ОБЯЗАТЕЛЬНО */
+    margin-bottom: 10px;
+}
+
+.birthday-mode {
+    box-shadow: 0 0 40px rgba(255, 200, 0, 0.6);
+}
+
+/* ===== DISCORD COLOR ===== */
+.discord:hover {
+    box-shadow: 0 0 15px #5865F2;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.csstats-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 26px;
+    height: 26px;
+
+    object-fit: contain;
+    cursor: pointer;
+
+    z-index: 1000;
+
+    opacity: 0.85;
+    transition: 0.2s;
+}
+
+.csstats-btn:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.csstats-btn {
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+    /* ← ВАЖНО */
+}
+
+/* FIX START */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.player {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.avatar {
+    width: 100%;
+    max-width: 120px;
+}
+
+h1 {
+    font-size: clamp(32px, 8vw, 120px);
+}
+
+.bottom-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.social-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: min(90%, 400px);
+}
+
+.header {
+    z-index: 20;
+}
+
+.bottom-nav {
+    z-index: 20;
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+}
+
+.social-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.socials {
+    text-align: center;
+}
+
+.social-grid {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+    justify-content: center;
+    gap: 20px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    margin-top: 50px;
+    padding-bottom: 80px;
+
+}
+
+.bottom-nav a {
+    padding: 18px 35px;
+    font-size: 18px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    transition: 0.2s;
+}
+
+.bottom-nav a:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px 20px;
+}
+
+.center h1 {
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+.start {
+    margin-bottom: 30px;
+}
+
+.social-grid {
+    grid-template-columns: repeat(2, 420px);
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-card {
+    width: 420px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 0 25px;
+    border-radius: 20px;
+}
+
+.social-card .icon {
+    width: 40px;
+    height: 40px;
+}
+
+.social-card h2 {
+    font-size: 18px;
+}
+
+.social-card span {
+    font-size: 14px;
+    opacity: 0.7;
+}

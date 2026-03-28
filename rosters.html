@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seluk Team - Rosters</title>
+    <link rel="stylesheet" href="rosters.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1 class="title" data-key="rosters">ROSTERS</h1>
+
+        <div class="grid" id="grid">
+
+            <div class="roster-card" data-roster="cs2-main">
+                <span class="roster-name" data-key="cs2_main">CS2 MAIN</span>
+            </div>
+
+            <div class="roster-card" data-roster="dota-main">
+                <span class="roster-name" data-key="dota_main">DOTA 2 MAIN</span>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="Script.js"></script>
+    <script src="rosters.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                if (typeof applyTranslations === "function") {
+                    applyTranslations();
+                }
+            }, 50);
+        });
+    </script>
+
+</body>
+
+</html>

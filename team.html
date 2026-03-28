@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seluk Team - Team</title>
+    <link rel="stylesheet" href="team.css">
+</head>
+
+<body>
+
+    <h1 class="team-title" data-key="team">TEAM</h1>
+
+    <div id="team" class="players"></div>
+
+    <!-- 1. перевод -->
+    <script src="Script.js"></script>
+
+    <!-- 2. логика -->
+    <script src="team.js"></script>
+    <div id="team"></div>
+
+    <!-- 3. фикс -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                if (typeof applyTranslations === "function") {
+                    applyTranslations();
+                }
+            }, 50);
+        });
+
+    </script>
+
+</body>
+
+</html>

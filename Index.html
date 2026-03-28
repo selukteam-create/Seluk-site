@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seluk Team</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="./Media/logo.webp" class="logo" alt="Seluk Team Logo" loading="lazy">
+
+        <div class="top-right">
+            <div class="lang">
+                <button class="lang-btn" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ua">UA</button>
+            </div>
+
+            <div class="matches-counter">
+                <span class="matches-num">48</span>
+                <span data-key="matches_played">matches played</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+
+        <section class="center">
+            <h1 data-key="title">Seluk Team</h1>
+
+            <p class="subtitle" data-key="subtitle">
+                Esports team
+            </p>
+
+            <p class="start" data-key="start">
+                Start: 02.24.25
+            </p>
+        </section>
+
+        <nav class="bottom-nav">
+            <a data-page="social" data-key="social">Social</a>
+            <a data-page="matches" data-key="matches">Matches</a>
+            <a data-page="news" data-key="news">News</a>
+            <a data-page="donate" data-key="donate">Donate</a>
+            <a href="rosters.html" class="rosters" data-key="rosters">Rosters</a>
+        </nav>
+
+    </main>
+
+    <script src="Script.js" defer></script>
+
+</body>
+
+</html>

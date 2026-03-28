@@ -1,0 +1,59 @@
+{
+    "cs2-main": [
+        {
+            "name": "Mitsua",
+            "role": "IGL (Captain)",
+            "img": "./Media/mitsua.png"
+        },
+        {
+            "name": "Kuromi",
+            "role": "Short",
+            "img": "./Media/kuromi.png"
+        },
+        {
+            "name": "Zont1x",
+            "role": "B",
+            "img": "./Media/zont1x.png"
+        },
+        {
+            "name": "Chelstorm",
+            "role": "Connector",
+            "img": "./Media/chelstorm.png"
+        },
+        {
+            "name": "Roma3SSS",
+            "role": "A",
+            "img": "./Media/roma3SSS.png"
+        }
+    ],
+    "cs2-academy": [],
+    "dota-main": [
+        {
+            "name": "Player",
+            "role": "Carry",
+            "img": "./Media/0one.png"
+        },
+        {
+            "name": "Player",
+            "role": "Mid",
+            "img": "./Media/0one.png"
+        },
+        {
+            "name": "Anton",
+            "role": "Offlane",
+            "img": "./Media/Anton.png"
+        },
+        {
+            "name": "Roma3SSS",
+            "role": "Support (Captain)",
+            "img": "./Media/roma3SSS.png"
+        },
+        {
+            "name": "Player",
+            "role": "Hard Support",
+            "img": "./Media/0one.png"
+        }
+    ],
+    "dota-academy": [],
+    "reserve": []
+}

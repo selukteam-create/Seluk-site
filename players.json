@@ -1,0 +1,117 @@
+{
+    "mitsua": {
+        "name": "Mitsua",
+        "birth": "2008-09-10",
+        "country": "ua",
+        "img": "./Media/mitsua.png",
+        "bio": {
+            "ru": "Капитан команды Seluk Team, также профессиональный универсал в игре Dota 2.",
+            "en": "Captain of Seluk Team, also a versatile professional Dota 2 player.",
+            "ua": "Капітан Seluk Team, також універсальний професійний гравець у Dota 2."
+        },
+        "faceit": "https://www.faceit.com/en/players/ABADDON2281",
+        "steam": "https://steamcommunity.com/profiles/76561199825378321",
+        "csstats": "https://csstats.gg/player/76561199825378321"
+    },
+    "kuromi": {
+        "name": "Kuromi",
+        "birth": "2007-10-14",
+        "country": "ua",
+        "img": "./Media/Kuromi.png",
+        "bio": {
+            "ru": "Игрок позиции short.",
+            "en": "Short position player.",
+            "ua": "Гравець позиції short."
+        },
+        "faceit": "https://www.faceit.com/uk/players/Damirasis",
+        "steam": "https://steamcommunity.com/profiles/76561199061946028",
+        "csstats": "https://csstats.gg/player/76561199061946028"
+    },
+    "zont1x": {
+        "name": "Zont1x",
+        "birth": "2008-01-09",
+        "country": "ua",
+        "img": "./Media/zont1x.png",
+        "bio": {
+            "ru": "Опорник B плента.",
+            "en": "B site anchor.",
+            "ua": "Опорник B пленту."
+        },
+        "faceit": "https://www.faceit.com/en/players/ASK1_",
+        "steam": "https://steamcommunity.com/profiles/76561199154036851",
+        "csstats": "https://csstats.gg/player/76561199154036851"
+    },
+    "chelstorm": {
+        "name": "Chelstorm",
+        "birth": "2008-02-07",
+        "country": "ua",
+        "img": "./Media/chelstorm.png",
+        "bio": {
+            "ru": "Игрок коннектора.",
+            "en": "Connector player.",
+            "ua": "Гравець конектора."
+        },
+        "faceit": "https://www.faceit.com/uk/players/_chel_storm_",
+        "steam": "https://steamcommunity.com/profiles/76561199484201343",
+        "csstats": "https://csstats.gg/player/76561199484201343"
+    },
+    "roma3sss": {
+        "name": "Roma3SSS",
+        "birth": "2025-10-01",
+        "country": "ua",
+        "img": "./Media/roma3SSS.png",
+        "bio": {
+            "ru": "Саппорт игрок, крутой пацан без моцыка и про игрок во все.",
+            "en": "Support player, cool guy and versatile gamer.",
+            "ua": "Сапорт гравець, крутий чувак і універсальний гравець."
+        },
+        "faceit": "https://www.faceit.com/en/players/FeedMaster69",
+        "steam": "https://steamcommunity.com/id/Roma_kvadrobika/",
+        "twitter": "https://x.com/Roma_kvadrobika",
+        "reddit": "https://www.reddit.com/user/roma_kvadrobika/",
+        "tiktok": "https://www.tiktok.com/@zeromas322",
+        "instagram": "https://www.instagram.com/cmdepos5/",
+        "csstats": "https://csstats.gg/player/76561199532469308"
+    },
+    "Mernix": {
+        "name": "Mernix",
+        "birth": "2008-08-18",
+        "country": "ua",
+        "img": "./Media/0one.png",
+        "bio": {
+            "ru": "Игрок резерва.",
+            "en": "Reserve player.",
+            "ua": "Гравець резерву."
+        },
+        "faceit": "https://www.faceit.com/en/players/merniixx",
+        "steam": "https://steamcommunity.com/id/gagarinets/",
+        "tiktok": "https://www.tiktok.com/@merniixx1",
+        "instagram": "https://www.instagram.com/merniixx",
+        "csstats": "https://csstats.gg/player/76561198097729200"
+    },
+    "anton": {
+        "name": "Anton",
+        "birth": "2006-07-20",
+        "country": "ua",
+        "img": "./Media/Anton.png",
+        "bio": {
+            "ru": "Оффлейн игрок.",
+            "en": "Offlane player.",
+            "ua": "Офлейн гравець."
+        },
+        "steam": "https://steamcommunity.com/profiles/76561198761734412"
+    },
+    "p314tuh": {
+        "name": "3.14tuh",
+        "birthday": "2025-10-22",
+        "country": "ua",
+        "img": "./Media/314tuh.png",
+        "bio": {
+            "ru": "Игрок академии, крутой пацан.",
+            "en": "Academy player, cool guy.",
+            "ua": "Гравець академії, крутий чувак."
+        },
+        "steam": "https://steamcommunity.com/profiles/76561199547256002",
+        "csstats": "https://csstats.gg/player/76561199547256002"
+    }
+}

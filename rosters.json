@@ -1,0 +1,32 @@
+[
+    {
+        "id": "cs2-main",
+        "name": "CS2 MAIN",
+        "image": "./Media/cs2.webp",
+        "link": "cs2-main.html"
+    },
+    {
+        "id": "dota-main",
+        "name": "DOTA 2 MAIN",
+        "image": "./Media/dota2.webp",
+        "link": "dota-main.html"
+    },
+    {
+        "id": "cs2-academy",
+        "name": "CS2 ACADEMY",
+        "image": "./Media/cs2.webp",
+        "link": "cs2-academy.html"
+    },
+    {
+        "id": "dota-academy",
+        "name": "DOTA 2 ACADEMY",
+        "image": "./Media/dota2.webp",
+        "link": "dota-academy.html"
+    },
+    {
+        "id": "reserve",
+        "name": "RESERVE",
+        "image": "./Media/logo.webp",
+        "link": "reserve.html"
+    }
+]

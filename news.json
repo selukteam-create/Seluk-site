@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "date": "2026-03-25",
+        "image": "./Media/cs2.webp",
+        "game": "cs2",
+        "title": {
+            "ru": "Победа CS2 состава",
+            "en": "CS2 roster victory",
+            "ua": "Перемога CS2 складу"
+        },
+        "text": {
+            "ru": "Основной состав CS2 одержал победу со счетом 2:0.",
+            "en": "The main CS2 roster won with a score of 2:0.",
+            "ua": "Основний склад CS2 здобув перемогу з рахунком 2:0."
+        }
+    },
+    {
+        "id": 2,
+        "date": "2026-03-20",
+        "image": "./Media/dota2.webp",
+        "game": "dota2",
+        "title": {
+            "ru": "Новый игрок в Dota 2",
+            "en": "New player in Dota 2",
+            "ua": "Новий гравець у Dota 2"
+        },
+        "text": {
+            "ru": "В состав Dota 2 присоединился новый керри.",
+            "en": "A new carry has joined the Dota 2 roster.",
+            "ua": "До складу Dota 2 приєднався новий керрі."
+        }
+    }
+]

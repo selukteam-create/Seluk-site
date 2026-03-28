@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reserve</title>
+    <link rel="stylesheet" href="team.css">
+</head>
+
+<body>
+
+    <h1 class="team-title">RESERVE</h1>
+
+    <div class="players">
+
+        <div class="player" data-player="Mernix">
+            <img src="./Media/0one.png" class="avatar">
+            <div class="name">Mernix</div>
+            <div class="role">Stand-in</div>
+        </div>
+
+    </div>
+
+    <!-- ✅ МОДАЛКА ВНЕ players -->
+    <div id="player-modal" class="modal hidden">
+        <div class="modal-content">
+
+            <!-- ✅ CSSTATS В УГЛУ -->
+            <img id="modal-csstats" class="csstats-btn" src="./Media/csstats.png">
+
+            <img id="modal-avatar" class="modal-avatar">
+
+            <h2 id="modal-name"></h2>
+            <p id="modal-age"></p>
+            <p id="modal-bio"></p>
+
+            <!-- FACEIT -->
+            <button id="modal-faceit">FACEIT</button>
+
+            <!-- СОЦСЕТИ -->
+            <div class="modal-socials">
+                <img data-type="telegram" src="https://img.icons8.com/color/48/telegram-app.png">
+                <img data-type="youtube" src="https://img.icons8.com/color/48/youtube-play.png">
+                <img data-type="tiktok" src="https://img.icons8.com/color/48/tiktok.png">
+                <img data-type="twitter" src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png">
+                <img data-type="reddit" src="https://img.icons8.com/color/48/reddit.png">
+                <img data-type="steam" src="https://img.icons8.com/color/48/steam.png">
+                <img data-type="instagram" src="https://img.icons8.com/color/48/instagram-new.png">
+            </div>
+
+            <button class="close-btn" onclick="closeModal()">✖</button>
+        </div>
+    </div>
+
+    <script src="player-modal.js"></script>
+
+</body>
+
+</html>

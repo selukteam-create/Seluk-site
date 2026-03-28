@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: radial-gradient(circle at 30% 50%, #3b0066, #000);
+    color: white;
+}
+
+/* TITLE */
+.team-title {
+    font-size: 80px;
+    padding: 60px;
+}
+
+/* PLAYERS GRID */
+.players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.player {
+    width: 220px;
+    height: 260px;
+
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* NAME */
+.player h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* ROLE */
+.player span {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* HOVER */
+.player:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* CAPTAIN */
+.player.captain {
+    border: 2px solid gold;
+    box-shadow: 0 0 20px gold;
+}
+
+.crown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+}
+
+/* ROLE BLOCK */
+.role {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ICON СПРАВА */
+.role-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #0e0e0e;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-avatar {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.flag {
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#modal-age {
+    cursor: help;
+    opacity: 0.8;
+}
+
+/* 🎂 */
+.cake {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 60px;
+    display: none;
+}
+
+.cake.show {
+    display: block;
+    animation: spin 2s linear infinite, glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px gold);
+    }
+
+    to {
+        filter: drop-shadow(0 0 15px gold);
+    }
+}
+
+<button id="modal-faceit"><img src="https://cdn-logos.com/wp-content/uploads/2016/10/Faceit_logo.png" style="height:20px;"></button>
+}

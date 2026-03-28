@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* фон */
+.bg {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, #6a00ff, #0b0f1a);
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    margin-top: clamp(30px, 6vw, 60px);
+    padding: 0 15px;
+}
+
+h1 {
+    font-size: clamp(26px, 4vw, 40px);
+}
+
+/* контейнер */
+.donate-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: clamp(30px, 5vw, 60px) auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(15px, 2vw, 25px);
+}
+
+/* карточки */
+.donate-card {
+    background: rgba(18, 24, 42, 0.8);
+    backdrop-filter: blur(10px);
+
+    border-radius: 18px;
+    padding: clamp(18px, 2vw, 25px);
+
+    text-align: center;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.donate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(140, 0, 255, 0.35);
+}
+
+/* иконки */
+.donate-card img {
+    width: clamp(40px, 6vw, 55px);
+    margin-bottom: 10px;
+}
+
+/* кнопки */
+.donate-card a,
+.donate-card button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    background: linear-gradient(45deg, #7b2cff, #b066ff);
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+    font-size: clamp(13px, 1.5vw, 15px);
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.donate-card a:hover,
+.donate-card button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* toast */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #7b2cff;
+    padding: 12px 25px;
+    border-radius: 10px;
+
+    font-size: clamp(13px, 1.5vw, 15px);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#toast.show {
+    opacity: 1;
+}
+
+/* адаптация */
+@media (max-width: 480px) {
+    .donate-container {
+        grid-template-columns: 1fr;
+    }
+}

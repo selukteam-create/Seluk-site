@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seluk Team - Donate</title>
+    <link rel="stylesheet" href="./donate.css">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+
+    <header>
+        <h1 data-key="donate_title">Поддержать Seluk Team</h1>
+    </header>
+
+    <main class="donate-container">
+
+        <div class="donate-card">
+            <img src="https://img.icons8.com/fluency/48/money-transfer.png" alt="">
+            <h2>DonatePay</h2>
+            <a href="https://donatepay.eu/don/45781" target="_blank" data-key="donate">Перейти</a>
+        </div>
+
+        <div class="donate-card">
+            <img src="https://img.icons8.com/color/48/twitch.png" alt="">
+            <h2>DonationAlerts</h2>
+            <a href="https://www.donationalerts.com/r/seluk_team" target="_blank" data-key="donate">Перейти</a>
+        </div>
+
+        <div class="donate-card">
+            <img src="https://img.icons8.com/color/48/paypal.png" alt="">
+            <h2>PayPal</h2>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=KACW86L2TAKRQ" target="_blank"
+                data-key="donate">Donate</a>
+        </div>
+
+        <div class="donate-card">
+            <img src="https://img.icons8.com/fluency/48/wallet.png" alt="">
+            <h2>Donatello</h2>
+            <a href="https://donatello.to/roma_kvadrobika" target="_blank" data-key="support">Поддержать</a>
+        </div>
+
+        <div class="donate-card">
+            <img src="https://img.icons8.com/fluency/48/bank-card-back-side.png" alt="">
+            <h2>Monobank</h2>
+            <p id="mono">4441111048424372</p>
+            <button onclick="copyText('mono')" data-key="copy">Скопировать</button>
+        </div>
+
+        <div class="donate-card">
+            <img src="https://img.icons8.com/fluency/48/bank.png" alt="">
+            <h2>PrivatBank</h2>
+            <p id="privat">5168752027858003</p>
+            <button onclick="copyText('privat')" data-key="copy">Скопировать</button>
+        </div>
+
+    </main>
+
+    <div id="toast" data-key="copied">Скопировано</div>
+
+    <script src="./Script.js" defer></script>
+
+    <script>
+        function copyText(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text);
+
+            const toast = document.getElementById("toast");
+            toast.innerText = translations[currentLang]["copied"];
+            toast.classList.add("show");
+
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 2000);
+        }
+    </script>
+
+</body>
+
+</html>
