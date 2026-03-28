@@ -2,7 +2,6 @@
     --purple: #7b2cff;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ГЛОУ */
 body::before {
     content: "";
     position: fixed;
@@ -30,7 +28,6 @@ body::before {
     z-index: -1;
 }
 
-/* ДОП ГЛОУ */
 body::after {
     content: "";
     position: fixed;
@@ -43,7 +40,6 @@ body::after {
     z-index: -1;
 }
 
-/* HEADER */
 .header {
     position: absolute;
     top: 0;
@@ -54,7 +50,6 @@ body::after {
     align-items: flex-start;
 }
 
-/* RIGHT TOP BLOCK */
 .top-right {
     display: flex;
     flex-direction: column;
@@ -62,7 +57,6 @@ body::after {
     gap: 10px;
 }
 
-/* LOGO */
 .logo {
     width: 80px;
     border-radius: 14px;
@@ -105,7 +99,6 @@ body::after {
     opacity: 0.7;
 }
 
-/* HERO */
 .hero {
     height: 100vh;
     display: flex;
@@ -114,13 +107,11 @@ body::after {
     align-items: center;
 }
 
-/* CENTER TEXT */
 .center {
     text-align: center;
     transition: transform 0.2s ease;
 }
 
-/* TITLE */
 h1 {
     font-size: 170px;
     background: linear-gradient(90deg, #fff, #a259ff);
@@ -128,20 +119,17 @@ h1 {
     color: transparent;
 }
 
-/* SUBTITLE */
 .subtitle {
     font-size: 26px;
     opacity: 0.8;
     margin-top: 10px;
 }
 
-/* START */
 .start {
     font-size: 16px;
     opacity: 0.5;
 }
 
-/* NAV */
 .bottom-nav {
     position: absolute;
     bottom: 60px;
@@ -153,7 +141,6 @@ h1 {
     gap: 30px;
 }
 
-/* КНОПКИ */
 .bottom-nav a {
     padding: 20px 36px;
     font-size: 16px;
@@ -166,13 +153,11 @@ h1 {
     overflow: hidden;
 }
 
-/* HOVER */
 .bottom-nav a:hover {
     transform: translateY(-8px) scale(1.08);
     box-shadow: 0 0 35px rgba(123, 44, 255, 0.9);
 }
 
-/* ЛИНИЯ */
 .bottom-nav a::before {
     content: "";
     position: absolute;
@@ -188,14 +173,12 @@ h1 {
     width: 100%;
 }
 
-/* ROSTER (главная кнопка) */
 .bottom-nav .rosters {
     background: linear-gradient(90deg, #7b2cff, #a259ff);
     box-shadow: 0 0 20px rgba(123, 44, 255, 0.7);
     animation: pulse 2s infinite;
 }
 
-/* ПУЛЬС */
 @keyframes pulse {
     0% {
         box-shadow: 0 0 10px rgba(123, 44, 255, 0.5);
@@ -268,7 +251,6 @@ h1 {
     box-shadow: 0 0 25px rgba(0, 255, 150, 0.15);
 }
 
-/* новый эффект вместо треугольника */
 .match::before {
     content: "";
     position: absolute;
@@ -317,22 +299,6 @@ h1 {
     }
 }
 
-/* hint */
-.hint {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-
-    background: #111;
-    color: #00ff88;
-
-    padding: 10px 20px;
-    border-radius: 8px;
-
-    opacity: 0;
-    transition: 0.3s;
-}
 
 .hint.show {
     opacity: 1;
@@ -459,7 +425,6 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* карточка */
 .social-card {
     position: relative;
 
@@ -475,7 +440,6 @@ h1 {
     transition: 0.3s;
 }
 
-/* glow */
 .social-card::before {
     content: "";
     position: absolute;
@@ -489,7 +453,6 @@ h1 {
     transform: translateY(-8px) scale(1.02);
 }
 
-/* текст */
 .social-card h2 {
     font-size: 22px;
     margin-top: 15px;
@@ -504,8 +467,6 @@ h1 {
     font-size: 28px;
     opacity: 0.8;
 }
-
-/* ===== ЦВЕТА ===== */
 
 .twitter::before {
     background: linear-gradient(120deg, #1da1f2, transparent);
@@ -531,7 +492,6 @@ h1 {
     opacity: 0.15;
 }
 
-/* неоновая линия */
 .social-card::after {
     content: "";
     position: absolute;
@@ -549,7 +509,6 @@ h1 {
     width: 100%;
 }
 
-/* ===== SOCIAL PAGE ===== */
 
 .socials {
     max-width: 1100px;
@@ -567,14 +526,12 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-/* grid */
 .social-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* карточка */
 .social-card {
     position: relative;
 
@@ -590,7 +547,6 @@ h1 {
     transition: 0.3s ease;
 }
 
-/* glow слой */
 .social-card::before {
     content: "";
     position: absolute;
@@ -604,7 +560,6 @@ h1 {
     transform: translateY(-10px) scale(1.02);
 }
 
-/* линия снизу */
 .social-card::after {
     content: "";
     position: absolute;
@@ -622,7 +577,6 @@ h1 {
     width: 100%;
 }
 
-/* текст */
 .icon {
     font-size: 30px;
     opacity: 0.8;
@@ -638,7 +592,6 @@ h1 {
     opacity: 0.5;
 }
 
-/* ===== PLATFORM COLORS ===== */
 
 .twitter::before {
     background: linear-gradient(120deg, #1da1f2, transparent);
@@ -664,7 +617,6 @@ h1 {
     opacity: 0.15;
 }
 
-/* текст glow */
 .social-card:hover h2 {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
@@ -683,7 +635,6 @@ h1 {
     z-index: 10;
 }
 
-/* иконки */
 .social-card .icon {
     width: 50px;
     height: 50px;
@@ -692,12 +643,10 @@ h1 {
     transition: 0.3s;
 }
 
-/* hover эффект */
 .social-card:hover .icon {
     transform: scale(1.15);
 }
 
-/* чтобы карточки выглядели дороже */
 .social-card {
     backdrop-filter: blur(10px);
     background: rgba(20, 20, 35, 0.6);
@@ -721,7 +670,6 @@ h1 {
     transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-/* ЛЁГКИЙ hover */
 .logo:hover {
     transform: scale(1.08) rotate(2deg);
     filter: drop-shadow(0 0 20px rgba(180, 100, 255, 0.8));
@@ -749,7 +697,6 @@ h1 {
     filter: drop-shadow(0 0 20px rgba(180, 100, 255, 0.8));
 }
 
-/* ===== SOCIAL PAGE ===== */
 
 .socials {
     max-width: 1100px;
@@ -793,7 +740,6 @@ h1 {
     opacity: 0.7;
 }
 
-/* цвета */
 
 .twitter:hover {
     box-shadow: 0 0 15px #1da1f2;
@@ -833,7 +779,6 @@ h1 {
     }
 }
 
-/* затемнение + glow */
 .birthday-mode {
     box-shadow: 0 0 40px rgba(255, 200, 0, 0.6);
 }
@@ -856,7 +801,6 @@ h1 {
 .cake {
     width: 60px;
     display: none;
-    /* ❗ ОБЯЗАТЕЛЬНО */
     margin-bottom: 10px;
 }
 
@@ -864,7 +808,6 @@ h1 {
     box-shadow: 0 0 40px rgba(255, 200, 0, 0.6);
 }
 
-/* ===== DISCORD COLOR ===== */
 .discord:hover {
     box-shadow: 0 0 15px #5865F2;
 }
@@ -899,7 +842,6 @@ h1 {
     width: 26px;
     height: 26px;
     object-fit: cover;
-    /* ← ВАЖНО */
 }
 
 /* FIX START */
@@ -939,9 +881,6 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.social-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-}
 
 .modal {
     position: fixed;
@@ -1067,15 +1006,16 @@ h1 {
     font-size: 14px;
     opacity: 0.7;
 }
-body {
-    font-family: 'Inter', sans-serif;
-}
+
 /* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
 
-    /* HEADER */
+    body {
+        padding: 10px;
+    }
+
     .header {
-        padding: 15px 20px;
+        padding: 10px 15px;
     }
 
     .logo {
@@ -1084,25 +1024,26 @@ body {
     }
 
     .top-right {
-        gap: 5px;
-    }
-
-    .lang {
+        flex-direction: column;
+        align-items: flex-end;
         gap: 5px;
     }
 
     .lang-btn {
-        padding: 6px 10px;
         font-size: 12px;
+        padding: 6px 10px;
     }
 
     .matches-counter {
         font-size: 12px;
     }
 
-    /* HERO TEXT */
+    .hero {
+        padding: 40px 10px;
+    }
+
     h1 {
-        font-size: 34px !important;
+        font-size: 32px !important;
         line-height: 1.2;
     }
 
@@ -1111,10 +1052,9 @@ body {
     }
 
     .start {
-        font-size: 13px;
+        font-size: 14px;
     }
 
-    /* NAV */
     .bottom-nav {
         position: static;
         transform: none;
@@ -1123,19 +1063,19 @@ body {
         align-items: center;
         gap: 10px;
 
-        margin-top: 30px;
+        margin-top: 25px;
     }
 
     .bottom-nav a {
         width: 90%;
-        text-align: center;
         padding: 14px;
         font-size: 14px;
+        text-align: center;
     }
 
-    /* SOCIAL GRID */
     .social-grid {
         grid-template-columns: 1fr !important;
+        gap: 15px;
     }
 
     .social-card {
@@ -1144,9 +1084,7 @@ body {
         flex-direction: row;
     }
 
-    /* PLAYERS */
     .players {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
