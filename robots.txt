@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://selukteam-create.github.io/Seluk-site/sitemap.xml
