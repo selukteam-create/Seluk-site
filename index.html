@@ -30,55 +30,109 @@
 
 <body>
 
-    <header class="header">
-        <img src="./Media/logo.webp" class="logo" alt="Seluk Team CS2 esports logo" loading="lazy">
+<header class="header">
+    <img src="./Media/logo.webp" class="logo" alt="Seluk Team CS2 esports logo" loading="lazy">
 
-        <div class="top-right">
-            <div class="lang">
-                <button class="lang-btn" data-lang="ru">RU</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="ua">UA</button>
-            </div>
-
-            <div class="matches-counter">
-                <span class="matches-num"></span>
-                <span data-key="matches_played">matches played</span>
-            </div>
+    <div class="top-right">
+        <div class="lang">
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ua">UA</button>
         </div>
-    </header>
 
-    <main class="hero">
+        <div class="matches-counter">
+            <span class="matches-num"></span>
+            <span data-key="matches_played"></span>
+        </div>
+    </div>
+</header>
 
-        <section class="center">
-            <h1 data-key="title">Seluk Team</h1>
+<main class="hero">
 
-            <p class="subtitle" data-key="subtitle">
-                CS2 esports team
-            </p>
+    <section class="center">
+        <h1 data-key="title"></h1>
 
-            <p class="start" data-key="start">
-                Start: 24.02.26
-            </p>
+        <p class="subtitle" data-key="subtitle"></p>
 
-            <p class="seo-text">
-                Seluk Team — киберспортивная команда по Counter-Strike 2 и не только.
-                На сайте представлены состав команды, игроки, статистика матчей и актуальные новости.
-            </p>
-        </section>
+        <p class="start" data-key="start"></p>
 
-        <nav class="bottom-nav">
-            <a data-page="social" data-key="social">Social</a>
-            <a data-page="matches" data-key="matches">Matches</a>
-            <a data-page="news" data-key="news">News</a>
-            <a data-page="donate" data-key="donate">Donate</a>
-            <a href="rosters.html" class="rosters" data-key="rosters">Rosters</a>
-        </nav>
+        <p class="seo-text" data-key="seo_text"></p>
+    </section>
 
-    </main>
+    <nav class="bottom-nav">
+        <a data-page="social" data-key="social"></a>
+        <a data-page="matches" data-key="matches"></a>
+        <a data-page="news" data-key="news"></a>
+        <a data-page="donate" data-key="donate"></a>
+        <a href="rosters.html" class="rosters" data-key="rosters"></a>
+    </nav>
 
-    <section class="socials container"></section>
+</main>
 
-    <script src="Script.js" defer></script>
+<section class="socials container"></section>
+
+<script>
+const translations = {
+    ru: {
+        title: "Seluk Team",
+        subtitle: "CS2 киберспортивная команда",
+        start: "Старт: 24.02.26",
+        seo_text: "Seluk Team — киберспортивная команда по Counter-Strike 2 и не только. На сайте представлены состав команды, игроки, статистика матчей и актуальные новости.",
+        matches_played: "матчей сыграно",
+        social: "Соцсети",
+        matches: "Матчи",
+        news: "Новости",
+        donate: "Донат",
+        rosters: "Состав"
+    },
+    en: {
+        title: "Seluk Team",
+        subtitle: "CS2 esports team",
+        start: "Start: 24.02.26",
+        seo_text: "Seluk Team is a Counter-Strike 2 esports team and more. The website includes roster, players, match stats and latest news.",
+        matches_played: "matches played",
+        social: "Social",
+        matches: "Matches",
+        news: "News",
+        donate: "Donate",
+        rosters: "Rosters"
+    },
+    ua: {
+        title: "Seluk Team",
+        subtitle: "CS2 кіберспортивна команда",
+        start: "Старт: 24.02.26",
+        seo_text: "Seluk Team — кіберспортивна команда з Counter-Strike 2 та не тільки. На сайті представлені склад команди, гравці, статистика матчів та актуальні новини.",
+        matches_played: "зіграно матчів",
+        social: "Соцмережі",
+        matches: "Матчі",
+        news: "Новини",
+        donate: "Донат",
+        rosters: "Склад"
+    }
+};
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.dataset.key;
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.onclick = () => setLang(btn.dataset.lang);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "ru";
+    setLang(savedLang);
+});
+</script>
+
+<script src="Script.js" defer></script>
 
 </body>
 </html>
