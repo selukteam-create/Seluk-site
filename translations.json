@@ -1,7 +1,7 @@
 {
     "ru": {
-        "title": "Seluk Team",
-        "subtitle": "Киберспортивная команда",
+        title: "Seluk Team — киберспортивная команда CS2 | Игроки, матчи, статистика",
+        subtitle: "Состав, информация и результаты матчей"
         "start": "Начало: 24.02.2026",
         "social": "Соцсети",
         "matches": "Матчи",
@@ -42,8 +42,8 @@
         "not_yet": "Скоро"
     },
     "en": {
-        "title": "Seluk Team",
-        "subtitle": "Esports team",
+        title: "Seluk Team — CS2 Esports Team | Players, Matches, Stats",
+        subtitle: "Roster, info and match results"
         "start": "Start: 24.02.2026",
         "social": "Social",
         "matches": "Matches",
@@ -84,8 +84,8 @@
         "not_yet": "Not yet"
     },
     "ua": {
-        "title": "Seluk Team",
-        "subtitle": "Кіберспортивна команда",
+        title: "Seluk Team — кіберспортивна команда CS2 | Гравці, матчі, статистика",
+        subtitle: "Склад, інформація та результати матчів"
         "start": "Початок: 24.02.2026",
         "social": "Соцмережі",
         "matches": "Матчі",
