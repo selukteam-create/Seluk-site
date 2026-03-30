@@ -113,5 +113,19 @@
         },
         "steam": "https://steamcommunity.com/profiles/76561199547256002",
         "csstats": "https://csstats.gg/player/76561199547256002"
+    },
+    "1nc3st": {
+        "name": "1nc3st",
+        "birth": "1983-11-28",
+        "country": "ua",
+        "img": "./Media/w1z.png",
+        "bio": {
+            "ru": "Игрок резерва Seluk Team.",
+            "en": "Reserve player of Seluk Team.",
+            "ua": "Гравець резерву Seluk Team."
+        },
+        "steam": "https://steamcommunity.com/profiles/76561199085304864",
+        "csstats": "https://csst.at/profile/76561199085304864",
+        "tiktok": "https://www.tiktok.com/@wizzer8901"
     }
 }
