@@ -20,18 +20,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0f001f">
 
-    <link rel="icon" href="/Seluk-site/favicon.ico">
     <link rel="icon" href="./favicon.ico?v=2">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
 
 <header class="header">
-    <img src="./Media/logo.webp" class="logo" alt="Seluk Team CS2 esports logo" loading="lazy">
+    <img src="./Media/logo.webp" class="logo" alt="Seluk Team Logo" loading="lazy">
 
     <div class="top-right">
         <div class="lang">
@@ -42,7 +40,7 @@
 
         <div class="matches-counter">
             <span class="matches-num"></span>
-            <span data-key="matches_played"></span>
+            <span data-key="matches_played">matches played</span>
         </div>
     </div>
 </header>
@@ -50,21 +48,27 @@
 <main class="hero">
 
     <section class="center">
-        <h1 data-key="title"></h1>
+        <h1 data-key="title">Seluk Team</h1>
 
-        <p class="subtitle" data-key="subtitle"></p>
+        <p class="subtitle" data-key="subtitle">
+            Esports team
+        </p>
 
-        <p class="start" data-key="start"></p>
+        <p class="start" data-key="start">
+            Start: 02.24.25
+        </p>
 
-        <p class="seo-text" data-key="seo_text"></p>
+        <p class="seo-text" data-key="seo_text" style="display:none;">
+            Seluk Team esports team
+        </p>
     </section>
 
     <nav class="bottom-nav">
-        <a data-page="social" data-key="social"></a>
-        <a data-page="matches" data-key="matches"></a>
-        <a data-page="news" data-key="news"></a>
-        <a data-page="donate" data-key="donate"></a>
-        <a href="rosters.html" class="rosters" data-key="rosters"></a>
+        <a data-page="social" data-key="social">Social</a>
+        <a data-page="matches" data-key="matches">Matches</a>
+        <a data-page="news" data-key="news">News</a>
+        <a data-page="donate" data-key="donate">Donate</a>
+        <a href="rosters.html" class="rosters" data-key="rosters">Rosters</a>
     </nav>
 
 </main>
@@ -77,7 +81,7 @@ const translations = {
         title: "Seluk Team",
         subtitle: "CS2 киберспортивная команда",
         start: "Старт: 24.02.26",
-        seo_text: "Seluk Team — киберспортивная команда по Counter-Strike 2 и не только. На сайте представлены состав команды, игроки, статистика матчей и актуальные новости.",
+        seo_text: "Seluk Team — киберспортивная команда по Counter-Strike 2. Состав, игроки, матчи и новости.",
         matches_played: "матчей сыграно",
         social: "Соцсети",
         matches: "Матчи",
@@ -89,7 +93,7 @@ const translations = {
         title: "Seluk Team",
         subtitle: "CS2 esports team",
         start: "Start: 24.02.26",
-        seo_text: "Seluk Team is a Counter-Strike 2 esports team and more. The website includes roster, players, match stats and latest news.",
+        seo_text: "Seluk Team is a Counter-Strike 2 esports team. Roster, players, matches and news.",
         matches_played: "matches played",
         social: "Social",
         matches: "Matches",
@@ -101,7 +105,7 @@ const translations = {
         title: "Seluk Team",
         subtitle: "CS2 кіберспортивна команда",
         start: "Старт: 24.02.26",
-        seo_text: "Seluk Team — кіберспортивна команда з Counter-Strike 2 та не тільки. На сайті представлені склад команди, гравці, статистика матчів та актуальні новини.",
+        seo_text: "Seluk Team — кіберспортивна команда з Counter-Strike 2. Склад, гравці, матчі та новини.",
         matches_played: "зіграно матчів",
         social: "Соцмережі",
         matches: "Матчі",
@@ -116,21 +120,28 @@ function setLang(lang) {
 
     document.querySelectorAll("[data-key]").forEach(el => {
         const key = el.dataset.key;
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             el.textContent = translations[lang][key];
         }
     });
+
+    document.documentElement.lang = lang;
 }
 
-document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.onclick = () => setLang(btn.dataset.lang);
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+
     const savedLang = localStorage.getItem("lang") || "ru";
     setLang(savedLang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            setLang(btn.dataset.lang);
+        });
+    });
+
 });
 </script>
+
 
 <script src="Script.js" defer></script>
 
