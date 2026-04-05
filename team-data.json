@@ -19,8 +19,8 @@
             "name": "Chelstorm",
             "role": "Connector",
             "img": "./Media/chelstorm.png"
-        },
-        
+        }
+    ],
     "cs2-academy": [],
     "dota-main": [
         {
@@ -51,5 +51,4 @@
     ],
     "dota-academy": [],
     "reserve": []
-    }
 }
