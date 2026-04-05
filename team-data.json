@@ -20,12 +20,7 @@
             "role": "Connector",
             "img": "./Media/chelstorm.png"
         },
-        {
-            "name": "Roma3SSS",
-            "role": "A",
-            "img": "./Media/roma3SSS.png"
-        }
-    ],
+        
     "cs2-academy": [],
     "dota-main": [
         {
