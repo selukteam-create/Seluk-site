@@ -22,6 +22,7 @@
         }
     ],
     "cs2-academy": [],
+
     "dota-main": [
         {
             "name": "Player",
@@ -49,6 +50,26 @@
             "img": "./Media/0one.png"
         }
     ],
+
     "dota-academy": [],
+
+    "pubg-main": [
+        {
+            "name": "Dani4-SSSvo",
+            "role": "Player",
+            "img": "./Media/Dani4-SSSvo.png"
+        },
+        {
+            "name": "mrazota-king",
+            "role": "Player",
+            "img": "./Media/mrazota-king.png"
+        },
+        {
+            "name": "pipidastrzz",
+            "role": "Player",
+            "img": "./Media/pipidastrzz.png"
+        }
+    ],
+
     "reserve": []
 }
