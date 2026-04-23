@@ -8,7 +8,7 @@
     {
         "id": "pubg-main",
         "name": "PUBG MAIN",
-        "image": "./Media/pubg.webp",
+        "image": "./Media/pubg.png",
         "link": "pubg-main.html"
     },
     {
