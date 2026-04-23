@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico?v=2">
+    <title>PUBG Main</title>
+    <link rel="stylesheet" href="team.css">
+</head>
+
+<body>
+
+    <main class="team-container">
+
+        <h1 class="team-title">PUBG MAIN</h1>
+
+        <section class="players">
+
+            <div class="player">
+                <img src="./Media/Dani4-SSSvo.png" class="avatar" alt="Dani4-SSSvo">
+                <div class="name">Dani4-SSSvo</div>
+                <div class="role">Player</div>
+            </div>
+
+            <div class="player">
+                <img src="./Media/mrazota-king.png" class="avatar" alt="mrazota-king">
+                <div class="name">mrazota-king</div>
+                <div class="role">Player</div>
+            </div>
+
+            <div class="player">
+                <img src="./Media/pipidastrzz.png" class="avatar" alt="pipidastrzz">
+                <div class="name">pipidastrzz</div>
+                <div class="role">Player</div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="player-modal" class="modal hidden">
+        <div class="modal-content">
+
+            <img id="birthday-cake" class="cake" src="https://cdn-icons-png.flaticon.com/512/720/720183.png" alt="">
+            <img id="modal-csstats" class="csstats-btn" src="./Media/csstats.png" alt="stats">
+
+            <img id="modal-avatar" class="modal-avatar" alt="avatar">
+
+            <div class="modal-header">
+                <h2 id="modal-name"></h2>
+            </div>
+
+            <p id="modal-age"></p>
+            <p id="modal-bio"></p>
+
+            <button id="modal-faceit" class="faceit-btn">PROFILE</button>
+
+            <div class="modal-socials">
+                <img data-type="telegram" src="https://img.icons8.com/color/48/telegram-app.png" alt="">
+                <img data-type="youtube" src="https://img.icons8.com/color/48/youtube-play.png" alt="">
+                <img data-type="tiktok" src="https://img.icons8.com/color/48/tiktok.png" alt="">
+                <img data-type="twitter" src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="">
+                <img data-type="reddit" src="https://img.icons8.com/color/48/reddit.png" alt="">
+                <img data-type="steam" src="https://img.icons8.com/color/48/steam.png" alt="">
+                <img data-type="instagram" src="https://img.icons8.com/color/48/instagram-new.png" alt="">
+            </div>
+
+            <button class="close-btn" onclick="closeModal()">✖</button>
+        </div>
+    </div>
+
+    <script src="player-modal.js" defer></script>
+</body>
+
+</html>
