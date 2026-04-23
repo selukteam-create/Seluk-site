@@ -133,27 +133,27 @@
     "name": "Dani4-SSSvo",
     "img": "./Media/Dani4-SSSvo.png",
     "bio": {
-        "ru": "Игрок PUBG состава.",
-        "en": "PUBG roster player.",
-        "ua": "Гравець PUBG складу."
+        "ru": "Игрок PUBG состава. Король Фрэндли фаера",
+        "en": "PUBG roster player. Friendly fire king",
+        "ua": "Гравець PUBG складу. Король френдлі фаєру"
     }
 },
 "mrazota-king": {
     "name": "mrazota-king",
     "img": "./Media/mrazota-king.png",
     "bio": {
-        "ru": "Игрок PUBG состава.",
-        "en": "PUBG roster player.",
-        "ua": "Гравець PUBG складу."
+        "ru": "Игрок PUBG состава. Легенда пабжи",
+        "en": "PUBG roster player. The legend of PUBG",
+        "ua": "Гравець PUBG складу. Легенда бабаджі"
     }
 },
 "pipidastrzz": {
     "name": "pipidastrzz",
     "img": "./Media/pipidastrzz.png",
     "bio": {
-       "ru": "Игрок основного состава PUBG. Также выступает за академический состав CS2.",
-       "en": "PUBG main roster player. Also plays for the CS2 academy team.",
-       "ua": "Гравець основного складу PUBG. Також виступає за академічний склад CS2."
+        "ru": "Игрок основного состава PUBG. Также выступает за академический состав CS2.",
+        "en": "PUBG main roster player. Also plays for the CS2 academy team.",
+        "ua": "Гравець основного складу PUBG. Також виступає за академічний склад CS2."
 }
     }
 }
