@@ -129,15 +129,17 @@
         "csstats": "https://csst.at/profile/76561199085304864",
         "tiktok": "https://www.tiktok.com/@wizzer8901"
     },
-    "dani4-sssvo": {
+"dani4-sssvo": {
     "name": "Dani4-SSSvo",
     "img": "./Media/Dani4-SSSvo.png",
     "bio": {
         "ru": "Игрок PUBG состава. Король Фрэндли фаера",
         "en": "PUBG roster player. Friendly fire king",
         "ua": "Гравець PUBG складу. Король френдлі фаєру"
-    }
+    },
+    "steam": "https://steamcommunity.com/profiles/76561199427155651"
 },
+
 "mrazota-king": {
     "name": "mrazota-king",
     "img": "./Media/mrazota-king.png",
@@ -145,8 +147,10 @@
         "ru": "Игрок PUBG состава. Легенда пабжи",
         "en": "PUBG roster player. The legend of PUBG",
         "ua": "Гравець PUBG складу. Легенда бабаджі"
-    }
+    },
+    "steam": "https://steamcommunity.com/profiles/76561198204547409"
 },
+
 "pipidastrzz": {
     "name": "pipidastrzz",
     "img": "./Media/pipidastrzz.png",
@@ -154,6 +158,6 @@
         "ru": "Игрок основного состава PUBG. Также выступает за академический состав CS2.",
         "en": "PUBG main roster player. Also plays for the CS2 academy team.",
         "ua": "Гравець основного складу PUBG. Також виступає за академічний склад CS2."
-}
-    }
+    },
+    "steam": "https://steamcommunity.com/profiles/76561199547256002"
 }
