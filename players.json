@@ -129,4 +129,31 @@
         "csstats": "https://csst.at/profile/76561199085304864",
         "tiktok": "https://www.tiktok.com/@wizzer8901"
     }
+    "dani4-sssvo": {
+    "name": "Dani4-SSSvo",
+    "img": "./Media/Dani4-SSSvo.png",
+    "bio": {
+        "ru": "Игрок PUBG состава.",
+        "en": "PUBG roster player.",
+        "ua": "Гравець PUBG складу."
+    }
+},
+"mrazota-king": {
+    "name": "mrazota-king",
+    "img": "./Media/mrazota-king.png",
+    "bio": {
+        "ru": "Игрок PUBG состава.",
+        "en": "PUBG roster player.",
+        "ua": "Гравець PUBG складу."
+    }
+},
+"pipidastrzz": {
+    "name": "pipidastrzz",
+    "img": "./Media/pipidastrzz.png",
+    "bio": {
+        "ru": "Игрок PUBG состава.",
+        "en": "PUBG roster player.",
+        "ua": "Гравець PUBG складу."
+    }
+}
 }
