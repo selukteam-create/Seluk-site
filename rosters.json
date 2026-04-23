@@ -6,6 +6,12 @@
         "link": "cs2-main.html"
     },
     {
+        "id": "pubg-main",
+        "name": "PUBG MAIN",
+        "image": "./Media/pubg.webp",
+        "link": "pubg-main.html"
+    },
+    {
         "id": "dota-main",
         "name": "DOTA 2 MAIN",
         "image": "./Media/dota2.webp",
