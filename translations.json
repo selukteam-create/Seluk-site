@@ -39,7 +39,8 @@
         "social_tiktok": "TikTok",
         "social_telegram": "Telegram",
         "social_youtube": "YouTube",
-        "not_yet": "Скоро"
+        "not_yet": "Скоро",
+        "copy_match_link": "Ссылка на матч успешно скопирована!"
     },
     "en": {
         "title": "Seluk Team",
@@ -81,7 +82,8 @@
         "social_tiktok": "TikTok",
         "social_telegram": "Telegram",
         "social_youtube": "YouTube",
-        "not_yet": "Not yet"
+        "not_yet": "Not yet",
+        "copy_match_link": "Match link copied successfully!"
     },
     "ua": {
         "title": "Seluk Team",
@@ -123,7 +125,8 @@
         "social_tiktok": "TikTok",
         "social_telegram": "Telegram",
         "social_youtube": "YouTube",
-        "not_yet": "Незабаром"
+        "not_yet": "Незабаром",
+        "copy_match_link": "Посилання на матч успішно скопійовано!"
     },
     "mitsua": {
         "name": "Mitsua",
