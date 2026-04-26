@@ -1,16 +1,16 @@
 {
-    "matches": [
-        {
-            "id": 1,
-            "roster": "cs2-main",
-            "game": "cs2",
-            "result": "win",
-            "teams": {
-                "our": "Seluk Team",
-                "enemy": "Team_aanaal"
-            },
-            "score": "13:7",
-            "link": "https://www.faceit.com/en/cs2/room/1-43a66376-1dbf-457d-8797-a46b12fcd89b/scoreboard"
-        }
-    ]
+  "matches": [
+    {
+      "id": 1,
+      "roster": "cs2-main",
+      "game": "cs2",
+      "result": "win",
+      "teams": {
+        "our": "Seluk Team",
+        "enemy": "Team_aanaal"
+      },
+      "score": "13:7",
+      "link": "https://www.faceit.com/en/cs2/room/1-43a66376-1dbf-457d-8797-a46b12fcd89b/scoreboard"
+    }
+  ]
 }
