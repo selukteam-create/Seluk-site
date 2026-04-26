@@ -7,31 +7,9 @@
             "result": "win",
             "teams": {
                 "our": "Seluk Team",
-                "enemy": "Team Aut"
+                "enemy": "Team_aanaal"
             },
-            "score": "2:1"
+            "score": "13:7"
         },
-        {
-            "id": 2,
-            "roster": "dota-main",
-            "game": "dota",
-            "result": "lose",
-            "teams": {
-                "our": "Seluk Team",
-                "enemy": "322"
-            },
-            "score": "1:2"
-        },
-        {
-            "id": 3,
-            "roster": "cs2-main",
-            "game": "cs2",
-            "result": "draw",
-            "teams": {
-                "our": "Seluk Team",
-                "enemy": "Zxc"
-            },
-            "score": "1:1"
-        }
     ]
 }
