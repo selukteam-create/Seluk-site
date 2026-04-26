@@ -34,13 +34,16 @@ async function loadMatches() {
 
             div.innerHTML = `
                 <img src="${icon}" class="match-icon" alt="game">
+
                 <div class="result-tag ${match.result}">
                     ${tag}
                 </div>
+
                 <div class="teams">
                     <span class="our">${match.teams?.our || "Unknown"}</span>
                     <span class="enemy"> — ${match.teams?.enemy || "Unknown"}</span>
                 </div>
+
                 <div class="score ${match.result}">
                     ${match.score || "0:0"}
                 </div>
@@ -48,7 +51,11 @@ async function loadMatches() {
 
             div.addEventListener("mouseenter", () => {
                 if (typeof showHint === "function") {
-                    showHint(match.link ? t("copy_match_link") : t("copy"));
+                    showHint(
+                        match.link
+                            ? t("copy_match_link")
+                            : t("copy")
+                    );
                 }
             });
 
@@ -56,15 +63,21 @@ async function loadMatches() {
                 if (match.link) {
                     try {
                         await navigator.clipboard.writeText(match.link);
+
                         if (typeof showHint === "function") {
                             showHint(t("copy_match_link"));
                         }
+
                     } catch (e) {
                         console.error(e);
                     }
+
                     window.open(match.link, "_blank");
+
                 } else if (match.matchId) {
+
                     navigator.clipboard.writeText(match.matchId);
+
                     if (typeof showHint === "function") {
                         showHint(t("copied"));
                     }
@@ -72,6 +85,7 @@ async function loadMatches() {
             });
 
             div.style.animationDelay = `${i * 0.06}s`;
+
             fragment.appendChild(div);
         });
 
