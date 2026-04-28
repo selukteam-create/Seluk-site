@@ -60,8 +60,13 @@
             "img": "./Media/Dani4-SSSvo.png"
         },
         {
-            "name": "Mrazota-king",
+            "name": "Q-cold",
             "role": "Player",
+            "img": "./Media/qcold.jpg"
+        },
+        {
+            "name": "Mrazota-king",
+            "role": "Player(Captain)",
             "img": "./Media/mrazota-king.png"
         },
         {
