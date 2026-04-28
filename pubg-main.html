@@ -7,6 +7,33 @@
     <title>PUBG MAIN</title>
     <link rel="icon" href="./favicon.ico?v=2">
     <link rel="stylesheet" href="team.css">
+
+    <style>
+        .player[data-player="mrazota-king"] {
+            position: relative;
+        }
+
+        .player[data-player="mrazota-king"]::after {
+            content: "👑";
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            font-size: 26px;
+            z-index: 100;
+            animation: kingCrownSpin 2s linear infinite;
+            filter: drop-shadow(0 0 8px gold);
+        }
+
+        @keyframes kingCrownSpin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -18,12 +45,7 @@
         <div class="players" id="players"></div>
 
     </main>
-            <div class="player captain" data-player="mrazota-king">
-                <img src="./Media/crown.png" class="crown" alt="captain">
-                <img src="./Media/mrazota-king.png" class="avatar" alt="Mitsua">
-                <h3>Mrazota-king</h3>
-                <span>In-Game Leader(captain)</span>
-            </div>
+
     <div id="player-modal" class="modal hidden">
         <div class="modal-content">
 
@@ -75,11 +97,16 @@
                 container.innerHTML = "";
 
                 team.forEach(player => {
-                    const id = player.name.toLowerCase(); // важно!
+                    const id = player.name.toLowerCase();
 
                     const div = document.createElement("div");
                     div.className = "player";
-                    div.setAttribute("data-player", id);
+
+                    if (id === "mrazota-king") {
+                        div.setAttribute("data-player", "mrazota-king");
+                    } else {
+                        div.setAttribute("data-player", id);
+                    }
 
                     div.innerHTML = `
                         <img src="${player.img}" class="avatar" alt="${player.name}">
