@@ -11,6 +11,10 @@
     <style>
         .player[data-player="mrazota-king"] {
             position: relative;
+            border: 2px solid gold;
+            box-shadow:
+                0 0 10px gold,
+                0 0 20px rgba(255, 215, 0, 0.5);
         }
 
         .player[data-player="mrazota-king"]::after {
@@ -18,20 +22,9 @@
             position: absolute;
             top: 8px;
             right: 10px;
-            font-size: 26px;
+            font-size: 24px;
             z-index: 100;
-            animation: kingCrownSpin 2s linear infinite;
-            filter: drop-shadow(0 0 8px gold);
-        }
-
-        @keyframes kingCrownSpin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
+            filter: drop-shadow(0 0 6px gold);
         }
     </style>
 </head>
