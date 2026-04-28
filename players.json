@@ -160,5 +160,15 @@
         "ua": "Гравець основного складу PUBG. Також виступає за академічний склад CS2."
     },
     "steam": "https://steamcommunity.com/profiles/76561199547256002"
+},
+    "Q_cold": {
+    "name": "Q_cold",
+    "img": "./Media/qcold.jpg",
+    "bio": {
+        "ru": "Игрок основного состава PUBG. Гомосексуалист.",
+        "en": "PUBG main roster player. Homosexual.",
+        "ua": "Гравець основного складу PUBG. Гомосексуаліст."
+    },
+    "steam": "https://steamcommunity.com/profiles/76561199802894770"
 }
 }
