@@ -66,12 +66,12 @@
         },
         {
             "name": "Mrazota-king",
-            "role": "Player(Captain)",
+            "role": "Player",
             "img": "./Media/mrazota-king.png"
         },
         {
             "name": "Pipidastrzz",
-            "role": "Player",
+            "role": "Captain",
             "img": "./Media/pipidastrzz.png"
         }
     ],
