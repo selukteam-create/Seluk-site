@@ -60,7 +60,7 @@
             "img": "./Media/Dani4-SSSvo.png"
         },
         {
-            "name": "Q-cold",
+            "name": "Q_cold",
             "role": "Player",
             "img": "./Media/qcold.jpg"
         },
