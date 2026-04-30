@@ -132,6 +132,8 @@
         🎂 Happy Birthday!
     </div>
 
+    <script src="player-modal.js"></script>
+
     <script>
         async function loadTeam() {
 
@@ -141,7 +143,6 @@
                 const data = await res.json();
 
                 const team = data["pubg-main"];
-
                 const container = document.getElementById("players");
 
                 if (!team || !container) return;
@@ -153,15 +154,11 @@
                     const id = player.name.toLowerCase();
 
                     const div = document.createElement("div");
-
                     div.className = "player";
 
                     if (id === "mrazota-king") {
-
                         div.setAttribute("data-player", "mrazota-king");
-
                     } else {
-
                         div.setAttribute("data-player", id);
                     }
 
@@ -174,6 +171,12 @@
                     container.appendChild(div);
                 });
 
+                /* ПОВТОРНО НАВЕШИВАЕМ КЛИКИ */
+
+                if (typeof initClicks === "function") {
+                    initClicks();
+                }
+
             } catch (e) {
 
                 console.error("Ошибка загрузки команды:", e);
@@ -182,8 +185,6 @@
 
         document.addEventListener("DOMContentLoaded", loadTeam);
     </script>
-
-    <script src="player-modal.js" defer></script>
 
 </body>
 
