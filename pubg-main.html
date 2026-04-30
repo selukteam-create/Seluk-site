@@ -28,8 +28,6 @@
             filter: drop-shadow(0 0 6px gold);
         }
 
-        /* CSSTATS BUTTON */
-
         .csstats-btn {
             position: absolute;
             top: 18px;
@@ -38,21 +36,16 @@
             width: 42px;
             height: 42px;
 
-            cursor: pointer;
             object-fit: contain;
+            cursor: pointer;
 
             transition: 0.2s ease;
-
             z-index: 20;
         }
 
         .csstats-btn:hover {
             transform: scale(1.1);
             filter: drop-shadow(0 0 8px #ffffff);
-        }
-
-        .csstats-btn.hidden {
-            display: none;
         }
     </style>
 </head>
@@ -71,77 +64,65 @@
 
         <div class="modal-content">
 
-            <!-- CSSTATS -->
-
             <img id="modal-csstats"
-                class="csstats-btn hidden"
+                class="csstats-btn"
                 src="./Media/csstats.png"
-                alt="stats">
-
-            <!-- CAKE -->
+                alt="csstats">
 
             <img id="birthday-cake"
                 class="cake"
                 src="https://cdn-icons-png.flaticon.com/512/2705/2705873.png"
                 alt="cake">
 
-            <!-- AVATAR -->
-
             <img id="modal-avatar"
                 class="modal-avatar"
                 alt="avatar">
-
-            <!-- HEADER -->
 
             <div class="modal-header">
                 <h2 id="modal-name"></h2>
             </div>
 
-            <!-- INFO -->
-
             <p id="modal-age"></p>
             <p id="modal-bio"></p>
-
-            <!-- PROFILE -->
 
             <button id="modal-faceit"
                 class="faceit-btn">
                 PROFILE
             </button>
 
-            <!-- SOCIALS -->
-
             <div class="modal-socials">
 
                 <img data-type="telegram"
-                    src="https://img.icons8.com/color/48/telegram-app.png">
+                    src="https://img.icons8.com/color/48/telegram-app.png"
+                    alt="telegram">
 
                 <img data-type="youtube"
-                    src="https://img.icons8.com/color/48/youtube-play.png">
+                    src="https://img.icons8.com/color/48/youtube-play.png"
+                    alt="youtube">
 
                 <img data-type="tiktok"
-                    src="https://img.icons8.com/color/48/tiktok.png">
+                    src="https://img.icons8.com/color/48/tiktok.png"
+                    alt="tiktok">
 
                 <img data-type="twitter"
-                    src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png">
+                    src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png"
+                    alt="twitter">
 
                 <img data-type="reddit"
-                    src="https://img.icons8.com/color/48/reddit.png">
+                    src="https://img.icons8.com/color/48/reddit.png"
+                    alt="reddit">
 
                 <img data-type="steam"
-                    src="https://img.icons8.com/color/48/steam.png">
+                    src="https://img.icons8.com/color/48/steam.png"
+                    alt="steam">
 
                 <img data-type="instagram"
-                    src="https://img.icons8.com/color/48/instagram-new.png">
+                    src="https://img.icons8.com/color/48/instagram-new.png"
+                    alt="instagram">
 
             </div>
 
-            <!-- CLOSE -->
-
-            <button class="close-btn"
-                onclick="closeModal()">
-                ✖
-            </button>
+            <button class="close-btn" onclick="closeModal()">✖</button>
 
         </div>
 
@@ -200,51 +181,6 @@
         }
 
         document.addEventListener("DOMContentLoaded", loadTeam);
-
-        /* =========================
-           CSSTATS LOGIC
-        ========================== */
-
-        document.addEventListener("click", async (e) => {
-
-            const playerCard = e.target.closest(".player");
-
-            if (!playerCard) return;
-
-            const playerId = playerCard.dataset.player;
-
-            try {
-
-                const res = await fetch("./players.json");
-                const players = await res.json();
-
-                const player = players[playerId];
-
-                if (!player) return;
-
-                const csstatsBtn = document.getElementById("modal-csstats");
-
-                /* SHOW / HIDE BUTTON */
-
-                if (player.csstats) {
-
-                    csstatsBtn.classList.remove("hidden");
-
-                    csstatsBtn.onclick = () => {
-                        window.open(player.csstats, "_blank");
-                    };
-
-                } else {
-
-                    csstatsBtn.classList.add("hidden");
-                    csstatsBtn.onclick = null;
-                }
-
-            } catch (err) {
-
-                console.error("Ошибка CSStats:", err);
-            }
-        });
     </script>
 
     <script src="player-modal.js" defer></script>
