@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PUBG MAIN</title>
+
     <link rel="icon" href="./favicon.ico?v=2">
     <link rel="stylesheet" href="team.css">
 
@@ -26,6 +27,33 @@
             z-index: 100;
             filter: drop-shadow(0 0 6px gold);
         }
+
+        /* CSSTATS BUTTON */
+
+        .csstats-btn {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+
+            width: 42px;
+            height: 42px;
+
+            cursor: pointer;
+            object-fit: contain;
+
+            transition: 0.2s ease;
+
+            z-index: 20;
+        }
+
+        .csstats-btn:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 8px #ffffff);
+        }
+
+        .csstats-btn.hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -40,36 +68,83 @@
     </main>
 
     <div id="player-modal" class="modal hidden">
+
         <div class="modal-content">
 
-            <img id="modal-csstats" class="csstats-btn" src="./Media/csstats.png" alt="stats">
+            <!-- CSSTATS -->
 
-            <img id="birthday-cake" class="cake"
-                src="https://cdn-icons-png.flaticon.com/512/2705/2705873.png" alt="cake">
+            <img id="modal-csstats"
+                class="csstats-btn hidden"
+                src="./Media/csstats.png"
+                alt="stats">
 
-            <img id="modal-avatar" class="modal-avatar" alt="avatar">
+            <!-- CAKE -->
+
+            <img id="birthday-cake"
+                class="cake"
+                src="https://cdn-icons-png.flaticon.com/512/2705/2705873.png"
+                alt="cake">
+
+            <!-- AVATAR -->
+
+            <img id="modal-avatar"
+                class="modal-avatar"
+                alt="avatar">
+
+            <!-- HEADER -->
 
             <div class="modal-header">
                 <h2 id="modal-name"></h2>
             </div>
 
+            <!-- INFO -->
+
             <p id="modal-age"></p>
             <p id="modal-bio"></p>
 
-            <button id="modal-faceit" class="faceit-btn">PROFILE</button>
+            <!-- PROFILE -->
+
+            <button id="modal-faceit"
+                class="faceit-btn">
+                PROFILE
+            </button>
+
+            <!-- SOCIALS -->
 
             <div class="modal-socials">
-                <img data-type="telegram" src="https://img.icons8.com/color/48/telegram-app.png">
-                <img data-type="youtube" src="https://img.icons8.com/color/48/youtube-play.png">
-                <img data-type="tiktok" src="https://img.icons8.com/color/48/tiktok.png">
-                <img data-type="twitter" src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png">
-                <img data-type="reddit" src="https://img.icons8.com/color/48/reddit.png">
-                <img data-type="steam" src="https://img.icons8.com/color/48/steam.png">
-                <img data-type="instagram" src="https://img.icons8.com/color/48/instagram-new.png">
+
+                <img data-type="telegram"
+                    src="https://img.icons8.com/color/48/telegram-app.png">
+
+                <img data-type="youtube"
+                    src="https://img.icons8.com/color/48/youtube-play.png">
+
+                <img data-type="tiktok"
+                    src="https://img.icons8.com/color/48/tiktok.png">
+
+                <img data-type="twitter"
+                    src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png">
+
+                <img data-type="reddit"
+                    src="https://img.icons8.com/color/48/reddit.png">
+
+                <img data-type="steam"
+                    src="https://img.icons8.com/color/48/steam.png">
+
+                <img data-type="instagram"
+                    src="https://img.icons8.com/color/48/instagram-new.png">
+
             </div>
 
-            <button class="close-btn" onclick="closeModal()">✖</button>
+            <!-- CLOSE -->
+
+            <button class="close-btn"
+                onclick="closeModal()">
+                ✖
+            </button>
+
         </div>
+
     </div>
 
     <div id="birthday" class="birthday hidden">
@@ -78,11 +153,14 @@
 
     <script>
         async function loadTeam() {
+
             try {
+
                 const res = await fetch("./team-data.json");
                 const data = await res.json();
 
                 const team = data["pubg-main"];
+
                 const container = document.getElementById("players");
 
                 if (!team || !container) return;
@@ -90,14 +168,19 @@
                 container.innerHTML = "";
 
                 team.forEach(player => {
+
                     const id = player.name.toLowerCase();
 
                     const div = document.createElement("div");
+
                     div.className = "player";
 
                     if (id === "mrazota-king") {
+
                         div.setAttribute("data-player", "mrazota-king");
+
                     } else {
+
                         div.setAttribute("data-player", id);
                     }
 
@@ -111,11 +194,57 @@
                 });
 
             } catch (e) {
+
                 console.error("Ошибка загрузки команды:", e);
             }
         }
 
         document.addEventListener("DOMContentLoaded", loadTeam);
+
+        /* =========================
+           CSSTATS LOGIC
+        ========================== */
+
+        document.addEventListener("click", async (e) => {
+
+            const playerCard = e.target.closest(".player");
+
+            if (!playerCard) return;
+
+            const playerId = playerCard.dataset.player;
+
+            try {
+
+                const res = await fetch("./players.json");
+                const players = await res.json();
+
+                const player = players[playerId];
+
+                if (!player) return;
+
+                const csstatsBtn = document.getElementById("modal-csstats");
+
+                /* SHOW / HIDE BUTTON */
+
+                if (player.csstats) {
+
+                    csstatsBtn.classList.remove("hidden");
+
+                    csstatsBtn.onclick = () => {
+                        window.open(player.csstats, "_blank");
+                    };
+
+                } else {
+
+                    csstatsBtn.classList.add("hidden");
+                    csstatsBtn.onclick = null;
+                }
+
+            } catch (err) {
+
+                console.error("Ошибка CSStats:", err);
+            }
+        });
     </script>
 
     <script src="player-modal.js" defer></script>
