@@ -165,7 +165,7 @@
     "csstats": "https://pubgstatistics.com/player/pipidastrrzz"
 },
 "q-cold": {
-    "name": "Q-cold",
+    "name": "Q_cold",
     "img": "./Media/qcold.jpg",
     "bio": {
         "ru": "Игрок основного состава PUBG.",
