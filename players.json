@@ -164,13 +164,13 @@
     "steam": "https://steamcommunity.com/profiles/76561199547256002",
     "csstats": "https://pubgstatistics.com/player/pipidastrrzz"
 },
-    "Q_cold": {
-    "name": "Q_cold",
+"q-cold": {
+    "name": "Q-cold",
     "img": "./Media/qcold.jpg",
     "bio": {
-        "ru": "Игрок основного состава PUBG. Гомосексуалист.",
-        "en": "PUBG main roster player. Homosexual.",
-        "ua": "Гравець основного складу PUBG. Гомосексуаліст."
+        "ru": "Игрок основного состава PUBG.",
+        "en": "PUBG main roster player.",
+        "ua": "Гравець основного складу PUBG."
     },
     "steam": "https://steamcommunity.com/profiles/76561199802894770",
     "csstats": "https://pubgstatistics.com/player/banana_pro228"
